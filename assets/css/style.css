@@ -1,0 +1,78 @@
+:root {
+  --white: #fff;
+  --darkBlue: #0d0221;
+  --federalBlue: #0f084b;
+  --marianBlue: #26408B;
+  --lightBlue: #c2e7d9;
+
+  --pad15: 15px;
+  --pad30: 30px;
+}
+
+html {
+  font: 100%/1.5 "Open Sans", sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Patua One", cursive;
+}
+h1 {
+  font-size: 2em; /* 2*16 = 32 */
+}
+h2 {
+  font-size: 1.5em; /* 1.5*16 = 24 */
+}
+h3 {
+  font-size: 1.17em; /* 1.17*16 = 18.72 */
+}
+h4 {
+  font-size: 1em;
+}
+p {
+  line-height: 1.5rem;
+  margin-bottom: 1em;
+}
+
+main {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
+    padding: 30px;
+}
+main aside {
+    margin-right: 30px;
+}
+#previousCities {
+    padding-top: 15px;
+    margin-top: 15px;
+    border-top: 1px solid var(--marianBlue);
+}
+#previousCities button {
+    display: block;
+    width: 100%;
+}
+body {
+  background-color: var(--federalBlue);
+  color: var(--lightBlue);
+}
+section {
+    flex: 1;
+}
+.articleWrapper {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 4;
+    justify-content: space-between;
+    align-items: stretch;
+}
+header {
+  background-color: var(--darkBlue);
+  padding: var(--pad15);
+  text-align: center;
+}
