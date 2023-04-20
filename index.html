@@ -6,7 +6,10 @@
     <title>Weather Dashboard</title>
     <link rel="stylesheet" type="text/css" href="./assets/css/reset.css" />
     <link rel="stylesheet" type="text/css" href="./assets/css/style.css" />
-    <!-- Font Awesome icons -->
+    <!-- 
+        Font Awesome icons
+        For icons visit: http://man.hubwiz.com/docset/Font_Awesome.docset/Contents/Resources/Documents/index.html
+    -->
     <link
       rel="stylesheet"
       href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
@@ -23,7 +26,7 @@
   </head>
   <body class="theme">
     <header>
-      <h1>Weather Dashboard</h1>
+      <h1>Weather Dashboard <i class="fas fa-cloud-sun-rain"></i></h1>
     </header>
 
     <main>
@@ -32,10 +35,23 @@
           <h2>
             <label for="searchCity">Search for a City:</label>
           </h2>
-          <input type="text" name="searchCity" id="searchCity" placeholder="Enter city" />
-          <button id="searchCityBtn">Search</button>
+          <div class="form-wrapper">
+            <input
+              type="text"
+              name="searchCity"
+              id="searchCity"
+              placeholder="Enter city"
+            />
+            <button id="searchCityBtn">
+              <i class="fas fa-search" aria-hidden="true"></i>
+            </button>
+          </div>
         </form>
-        <div id="previousCities"></div>
+        <div id="previousCities">
+          <button id="deleteHistory" class="link">
+            Delete history <i class="fas fa-trash"></i>
+          </button>
+        </div>
       </aside>
 
       <section>
@@ -48,44 +64,38 @@
 
         <article id="fiveDayForecast">
           <h3>5-Day Forecast:</h3>
-          <div class="articleWrapper">
+          <div class="article-wrapper">
             <article>
-                <h4>Monday</h4>
-                <p>Temp: 76.62F</p>
-                <p>Wind: 8.43 MPH</p>
-                <p>Humidity: 44%</p>
+              <h4>Monday</h4>
+              <p>Temp: 76.62F</p>
+              <p>Wind: 8.43 MPH</p>
+              <p>Humidity: 44%</p>
             </article>
             <article>
-                <h4>Monday</h4>
-                <p>Temp: 76.62F</p>
-                <p>Wind: 8.43 MPH</p>
-                <p>Humidity: 44%</p>
+              <h4>Monday</h4>
+              <p>Temp: 76.62F</p>
+              <p>Wind: 8.43 MPH</p>
+              <p>Humidity: 44%</p>
             </article>
             <article>
-                <h4>Monday</h4>
-                <p>Temp: 76.62F</p>
-                <p>Wind: 8.43 MPH</p>
-                <p>Humidity: 44%</p>
+              <h4>Monday</h4>
+              <p>Temp: 76.62F</p>
+              <p>Wind: 8.43 MPH</p>
+              <p>Humidity: 44%</p>
             </article>
             <article>
-                <h4>Monday</h4>
-                <p>Temp: 76.62F</p>
-                <p>Wind: 8.43 MPH</p>
-                <p>Humidity: 44%</p>
+              <h4>Monday</h4>
+              <p>Temp: 76.62F</p>
+              <p>Wind: 8.43 MPH</p>
+              <p>Humidity: 44%</p>
             </article>
             <article>
-                <h4>Monday</h4>
-                <p>Temp: 76.62F</p>
-                <p>Wind: 8.43 MPH</p>
-                <p>Humidity: 44%</p>
+              <h4>Monday</h4>
+              <p>Temp: 76.62F</p>
+              <p>Wind: 8.43 MPH</p>
+              <p>Humidity: 44%</p>
             </article>
-            <article>
-                <h4>Monday</h4>
-                <p>Temp: 76.62F</p>
-                <p>Wind: 8.43 MPH</p>
-                <p>Humidity: 44%</p>
-            </article>
-            </div>
+          </div>
         </article>
       </section>
     </main>

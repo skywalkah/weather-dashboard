@@ -1,78 +1,194 @@
 :root {
-  --white: #fff;
-  --darkBlue: #0d0221;
-  --federalBlue: #0f084b;
-  --marianBlue: #26408B;
-  --lightBlue: #c2e7d9;
-
-  --pad15: 15px;
-  --pad30: 30px;
-}
-
-html {
-  font: 100%/1.5 "Open Sans", sans-serif;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: "Patua One", cursive;
-}
-h1 {
-  font-size: 2em; /* 2*16 = 32 */
-}
-h2 {
-  font-size: 1.5em; /* 1.5*16 = 24 */
-}
-h3 {
-  font-size: 1.17em; /* 1.17*16 = 18.72 */
-}
-h4 {
-  font-size: 1em;
-}
-p {
-  line-height: 1.5rem;
-  margin-bottom: 1em;
-}
-
-main {
+    --white: #fff;
+    --darkBlue: #0d0221;
+    --federalBlue: #0f084b;
+    --marianBlue: #26408b;
+    --lightBlue: #c2e7d9;
+  
+    --lightBlue05: rgba(194, 231, 217, 0.5);
+    --lightBlue1: rgba(194, 231, 217, 1);
+  
+    --pad15: 15px;
+    --pad20: 20px;
+    --pad30: 30px;
+  
+    --borderRadius: 5px;
+  }
+  
+  html {
+    font: 100%/1.5 'Open Sans', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+  body {
+    background-color: var(--federalBlue);
+    color: var(--lightBlue);
+  }
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: 'Patua One', cursive;
+  }
+  h1 {
+    font-size: 2em;
+  }
+  h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  h3 {
+    font-size: 1.17em;
+  }
+  h4 {
+    font-size: 1em;
+  }
+  p {
+    line-height: 1.5rem;
+    margin-bottom: 1em;
+  }
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+  main {
     display: flex;
+    max-width: 1024px;
     min-height: 100vh;
     flex-direction: row;
-    margin: 0;
-    padding: 30px;
-}
-main aside {
-    margin-right: 30px;
-}
-#previousCities {
+    margin: 0 auto;
+    padding: var(--pad30);
+  }
+  main aside {
+    width: 240px;
+    margin-right: var(--pad30);
+  }
+  @media all and (max-width: 768px) {
+    main {
+      display: block;
+    }
+    main aside {
+      width: 100%;
+      margin-bottom: var(--pad30);
+    }
+  }
+  .form-wrapper {
+    position: relative;
+    height: 40px;
+  }
+  #searchCityForm i {
+    color: var(--lightBlue);
+  }
+  #searchCityForm input {
+    border: 2px solid var(--lightBlue);
+    background: transparent;
+    padding-left: 25px;
+    position: absolute;
+    border-radius: 20px;
+    width: 100%;
+    height: 40px;
+    color: var(--lightBlue);
+    font-size: inherit;
+  }
+  #searchCityForm input::placeholder {
+    color: var(--lightBlue05);
+  }
+  #searchCityForm input:-internal-autofill-selected {
+    background-color: transparent;
+  }
+  #searchCityForm button {
+    background: var(--federalBlue);
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    height: 100%;
+    border: 0;
+    border-radius: 50%;
+    width: 36px;
+    height: 36px;
+    transition: all 0.2s ease 0s;
+  }
+  #searchCityForm button:hover {
+    cursor: pointer;
+  }
+  #searchCityForm button:focus-visible {
+    border: 0;
+    top: 2px;
+    right: 2px;
+    width: 36px;
+    height: 36px;
+  }
+  #previousCities {
+    display: none;
     padding-top: 15px;
     margin-top: 15px;
     border-top: 1px solid var(--marianBlue);
-}
-#previousCities button {
+  }
+  #previousCities button {
     display: block;
     width: 100%;
-}
-body {
-  background-color: var(--federalBlue);
-  color: var(--lightBlue);
-}
-section {
+    background-color: var(--lightBlue05);
+    height: 30px;
+    border-radius: 15px;
+    border: 0;
+    transition: all 0.3s ease 0s;
+    margin-bottom: 5px;
+    font-size: inherit;
+  }
+  #previousCities button:hover {
+    background-color: var(--lightBlue1);
+    cursor: pointer;
+  }
+  section {
     flex: 1;
-}
-.articleWrapper {
-    display: flex;
-    flex-direction: row;
-    flex-grow: 4;
-    justify-content: space-between;
-    align-items: stretch;
-}
-header {
-  background-color: var(--darkBlue);
-  padding: var(--pad15);
-  text-align: center;
-}
+  }
+  #currentWeather {
+    background-color: var(--lightBlue);
+    color: var(--federalBlue);
+    border-radius: var(--borderRadius);
+    padding: var(--pad15);
+    margin-bottom: var(--pad30);
+  }
+  #fiveDayForecast h3 {
+    margin-bottom: var(--pad15);
+  }
+  .article-wrapper {
+    display: inline-flex;
+    gap: var(--pad15);
+  }
+  @media all and (max-width: 768px) {
+    .article-wrapper {
+      display: block;
+    }
+    .article-wrapper > article {
+      margin-bottom: var(--pad15);
+    }
+  }
+  @media all and (max-width: 1024px) {
+    .article-wrapper {
+      flex-wrap: wrap;
+    }
+  }
+  .article-wrapper > article {
+    background-color: var(--marianBlue);
+    padding: var(--pad15);
+    border-radius: var(--borderRadius);
+  }
+  header {
+    background-color: var(--darkBlue);
+    padding: var(--pad15);
+    text-align: center;
+  }
+  .link {
+    background: none !important;
+    border: none;
+    padding: 0 !important;
+    /*optional*/
+    font-family: arial, sans-serif;
+    /*input has OS specific font-family*/
+    color: var(--lightBlue05);
+    cursor: pointer;
+  }
+  .link:hover {
+    color: #e55039;
+  }
+  
