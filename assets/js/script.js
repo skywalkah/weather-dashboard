@@ -2,6 +2,7 @@ const searchCityBtn = document.querySelector('#searchCityBtn');
 const searchCityInput = document.querySelector('#searchCity');
 const previousCities = document.querySelector('#previousCities');
 const deleteHistoryBtn = document.querySelector('#deleteHistory');
+// const iconurl = "http://openweathermap.org/img/w/" + iconcode + "@2x.png";
 var cities = [];
 
 // Load previous cities from local storage

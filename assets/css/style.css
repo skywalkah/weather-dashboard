@@ -1,9 +1,9 @@
 :root {
     --white: #fff;
-    --darkBlue: #0d0221;
-    --federalBlue: #0f084b;
-    --marianBlue: #26408b;
-    --lightBlue: #c2e7d9;
+    --darkBlue: #0d1b2a;
+    --federalBlue: #1b263b;
+    --marianBlue: #415a77;
+    --lightBlue: #e0e1dd;
   
     --lightBlue05: rgba(194, 231, 217, 0.5);
     --lightBlue1: rgba(194, 231, 217, 1);
@@ -13,10 +13,13 @@
     --pad30: 30px;
   
     --borderRadius: 5px;
+
+    --serif: 'Patua One', cursive;
+    --sansSerif: 'Open Sans', sans-serif;
   }
   
   html {
-    font: 100%/1.5 'Open Sans', sans-serif;
+    font: 100%/1.5 var(--sansSerif);
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
   }
@@ -28,7 +31,7 @@
   h2,
   h3,
   h4 {
-    font-family: 'Patua One', cursive;
+    font-family: var(--serif);
   }
   h1 {
     font-size: 2em;
@@ -145,10 +148,37 @@
     background-color: var(--lightBlue);
     color: var(--federalBlue);
     border-radius: var(--borderRadius);
-    padding: var(--pad15);
+    padding: var(--pad20);
     margin-bottom: var(--pad30);
+    position: relative;
+    height: 200px;
+    text-align: center;
   }
-  #fiveDayForecast h3 {
+  #currentWeather h2 {
+    text-align: left;
+    font-size: 2rem;
+  }
+  #currentWeather > p:first-of-type {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    line-height: .5;
+  }
+  #currentWeather > p {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+  }
+  #currentWeather > p span {
+    font-size: 4rem;
+    font-weight: 800;
+  }
+  @media all and (max-width: 768px) {
+    #currentWeather > p span {
+      font-size: 3rem;
+    }
+  }
+  #fiveDayForecast > h3 {
     margin-bottom: var(--pad15);
   }
   .article-wrapper {
@@ -160,7 +190,7 @@
       display: block;
     }
     .article-wrapper > article {
-      margin-bottom: var(--pad15);
+      margin-bottom: var(--pad20);
     }
   }
   @media all and (max-width: 1024px) {
@@ -170,8 +200,24 @@
   }
   .article-wrapper > article {
     background-color: var(--marianBlue);
-    padding: var(--pad15);
+    padding: var(--pad20);
     border-radius: var(--borderRadius);
+    text-align: center;
+  }
+  .article-wrapper > article h3 {
+    margin-bottom: 0;
+  }
+  .article-wrapper > article p {
+    margin: 0;
+    font-size: .75rem;
+  }
+  .article-wrapper > article p span {
+    font-size: 2rem;
+    font-weight: 800;
+  }
+  .article-wrapper > article p:first-of-type {
+    text-align: center;
+    margin-bottom: var(--pad15);
   }
   header {
     background-color: var(--darkBlue);
