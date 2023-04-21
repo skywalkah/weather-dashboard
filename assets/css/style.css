@@ -162,9 +162,17 @@
     text-align: center;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
   }
+  #currentWeather img {
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    margin-top: -100px;
+    margin-left: -100px;
+  }
   #currentWeather h2 {
     text-align: left;
     font-size: 2rem;
+    margin-bottom: 110px;
   }
   #currentWeather h3 {
     padding: 30px;
@@ -173,7 +181,7 @@
   #currentWeather > p:first-of-type {
     position: absolute;
     top: 30px;
-    right: 30px;
+    right: 20px;
     line-height: .5;
   }
   #currentWeather > p {
@@ -182,8 +190,9 @@
     text-align: right;
   }
   #currentWeather > p span {
-    font-size: 4rem;
-    font-weight: 800;
+    font-size: 6rem;
+    font-weight: 600;
+    margin-right: -15px;
   }
   @media all and (max-width: 768px) {
     #currentWeather > p span {

@@ -124,7 +124,7 @@ var showCurrentWeather = function (data, city) {
     let currentWeatherHtml = '';
     // We are setting and formatting the current date with DayJS 
     const date = dayjs().format('MM/DD/YYYY');
-    const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png`;
+    const iconUrl = `https://openweathermap.org/img/wn/${data.weather[0].icon}@4x.png`;
     const description = data.weather[0].description;
     // We are rounding the temperature to the nearest integer and saving it to "temp"
     const temp = Math.round(data.main.temp);
