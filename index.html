@@ -48,6 +48,7 @@
           </div>
         </form>
         <div id="previousCities">
+          <div id="previousCitiesBtns"></div>
           <button id="deleteHistory" class="link">
             Delete history <i class="fas fa-trash"></i>
           </button>
@@ -55,75 +56,16 @@
       </aside>
 
       <section>
-        <article id="currentWeather">
-          <h2>Raleigh</h2>
-          <img
-            src="https://openweathermap.org/img/wn/10d@2x.png"
-            alt="weather icon"
-          />
-          <p><span>76.62</span>F</p>
-          <p>Wind: 8.43 MPH</p>
-          <p>Humidity: 44%</p>
-        </article>
+        <article id="currentWeather"><h3>Please enter a city</h3></article>
 
         <article id="fiveDayForecast">
           <h3>5-Day Forecast:</h3>
-          <div class="article-wrapper">
-            <article>
-              <h3>04/31/2023</h3>
-              <img
-                src="https://openweathermap.org/img/wn/10d@2x.png"
-                alt="weather icon"
-              />
-              <p><span>76.62</span>F</p>
-              <p>Wind: 8.43 MPH</p>
-              <p>Humidity: 44%</p>
-            </article>
-            <article>
-              <h3>04/31/2023</h3>
-              <img
-                src="https://openweathermap.org/img/wn/10d@2x.png"
-                alt="weather icon"
-              />
-              <p><span>76.62</span>F</p>
-              <p>Wind: 8.43 MPH</p>
-              <p>Humidity: 44%</p>
-            </article>
-            <article>
-              <h3>04/31/2023</h3>
-              <img
-                src="https://openweathermap.org/img/wn/10d@2x.png"
-                alt="weather icon"
-              />
-              <p><span>76.62</span>F</p>
-              <p>Wind: 8.43 MPH</p>
-              <p>Humidity: 44%</p>
-            </article>
-            <article>
-              <h3>04/31/2023</h3>
-              <img
-                src="https://openweathermap.org/img/wn/10d@2x.png"
-                alt="weather icon"
-              />
-              <p><span>76.62</span>F</p>
-              <p>Wind: 8.43 MPH</p>
-              <p>Humidity: 44%</p>
-            </article>
-            <article>
-              <h3>04/31/2023</h3>
-              <img
-                src="https://openweathermap.org/img/wn/10d@2x.png"
-                alt="weather icon"
-              />
-              <p><span>76.62</span>F</p>
-              <p>Wind: 8.43 MPH</p>
-              <p>Humidity: 44%</p>
-            </article>
-          </div>
+          <div class="article-wrapper"></div>
         </article>
       </section>
     </main>
-
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+    <script>dayjs().format()</script>
     <script src="./assets/js/script.js"></script>
   </body>
 </html>

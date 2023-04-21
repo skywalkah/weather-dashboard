@@ -1,12 +1,12 @@
 # Server-Side APIs: Weather Dashboard
 ## Description
-A weather dashboard that will run in the browser and feature dynamically updated HTML and CSS.
+A weather dashboard that runs in the browser and features dynamically updated HTML and CSS. It fetches weather data using OpenWeather's API. It saves your search history of in local storage.
 ## Installation
 N/A
 ## Usage
-Open [this website](https://skywalkah.github.io/work-day-scheduller/) in Chrome. Click any of the time slots to add a task. Then click on the blue button to save. Refresh page to check wether it was saved. Open Developer tools console to look for errors. Make sure to test this application between 9am and 5pm to see all colors. If you check this app before 9am, all slots will be green, indicating they are in the future. If you check it after 5pm, all slots will be grey, indicating they are in the past.
+Open [this website](https://skywalkah.github.io/work-day-scheduller/) in Chrome. Enter a city in the input, click the magnifying glass or hit enter. Open Developer tools console to look for errors. Try entering different cities, then click on previously entered cities to load their weather data again.
 ## What it should look like
-![A screenshot of the desktop view](./assets/images/Work-Day-Scheduler.png)
+![A screenshot of the desktop view](./assets/images/Weather-Dashboard.png)
 ## Credits
 [Meyerweb reset](https://meyerweb.com/eric/tools/css/reset/)
 
