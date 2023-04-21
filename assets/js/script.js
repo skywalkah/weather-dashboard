@@ -49,7 +49,7 @@ searchCityBtn.addEventListener('click', function (event) {
 var getWeather = function (city) {
 
     // Lets store the API url path to get us the Latitude and Longitude of the city
-    const getLatLonAPI = 'http://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=1&appid=' + apiKey;
+    const getLatLonAPI = 'https://api.openweathermap.org/geo/1.0/direct?q=' + city + '&limit=1&appid=' + apiKey;
 
     // Lets declare empty variables 
     let lat, lon;
