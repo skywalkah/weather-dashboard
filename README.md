@@ -4,7 +4,7 @@ A weather dashboard that runs in the browser and features dynamically updated HT
 ## Installation
 N/A
 ## Usage
-Open [this website](https://skywalkah.github.io/work-day-scheduller/) in Chrome. Enter a city in the input, click the magnifying glass or hit enter. Open Developer tools console to look for errors. Try entering different cities, then click on previously entered cities to load their weather data again.
+Open [this website](https://skywalkah.github.io/weather-dashboard/) in Chrome. Enter a city in the input, click the magnifying glass or hit enter. Open Developer tools console to look for errors. Try entering different cities, then click on previously entered cities to load their weather data again.
 ## What it should look like
 ![A screenshot of the desktop view](./assets/images/Weather-Dashboard.png)
 ## Credits
